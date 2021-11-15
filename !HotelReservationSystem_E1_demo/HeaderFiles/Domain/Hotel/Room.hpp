@@ -56,7 +56,7 @@ namespace Domain::Hotel
 	  std::string serialize();
 	  double getPrice();
 	  bool isAvailable(time_t start, time_t end);
-	  void reserve(Domain::Reservation::Reservation);
+	  void reserve(Domain::Reservation::Reservation reservation);
 	  
      ~Room() noexcept;
 	private:
