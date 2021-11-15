@@ -1,3 +1,11 @@
+/*
+ * Author: Josh Ibad
+ * Class: CPSC 462 - 02, Thomas Bettens
+ * Date: November 15, 2021 - Elaboration 1
+ *
+ * Project: Hotel Reservation System - E1
+ */
+ 
 #include "TechnicalServices/Persistence/SimpleDB.hpp"
 
 #include <fstream>    // streamsize
@@ -88,7 +96,7 @@ namespace TechnicalServices::Persistence
 
   std::vector<std::string> SimpleDB::findRoles()
   {
-    return { "Management", "Guest" }; //REMOVEME: , "Administrator", ""
+    return { "Management", "Guest" };
   }
 
 

@@ -1,3 +1,11 @@
+/*
+ * Author: Josh Ibad
+ * Class: CPSC 462 - 02, Thomas Bettens
+ * Date: November 15, 2021 - Elaboration 1
+ *
+ * Project: Hotel Reservation System - E1
+ */
+ 
 #include "UI/SimpleUI.hpp"
 
 #include <any>         // any_cast()
