@@ -11,7 +11,7 @@ namespace Domain::Hotel
       using HotelHandler::HotelHandler;  // inherit constructors
 
       // Operations
-	  double reserveRoom(std::string roomID, time_t start, time_t end) override;
+	  Domain::Reservation::Reservation reserveRoom(std::string roomID, time_t start, time_t end) override;
 	  Room* getHotelRoom(std::string roomID) override;
 	  std::string addHotelRoom(double price, RoomType roomType, BedType bedType, int bedCount, std::string desc) override;
 	  std::vector<std::string> getHotelRooms() override;

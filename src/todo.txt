@@ -9,7 +9,7 @@ src/
 	  + PersistenceHandler.hpp
 	  + PersistenceHandler.cpp
 	  + SimpleDB.hpp
-	  - SimpleDB.cpp - (Remove tmp creds)
+	  + SimpleDB.cpp
   Domain/
 	Session/
 	  + SessionHandler.hpp
@@ -19,16 +19,23 @@ src/
 	Hotel/
 	  + HotelHandler.hpp
 	  + Hotel.hpp
-	  - Hotel.cpp - (WIP)
-	  - Room.hpp - (WIP)
-	  - Room.cpp - (WIP)
+	  + Hotel.cpp
+	  + Room.hpp
+	  + Room.cpp
 	Reservation/
 	  + Reservation.hpp
 	  + Reservation.cpp
-		
+	  + BillingMethod.hpp
+	  + BillingMethod.cpp
+	  + Transaction.hpp
+	  + Transaction.cpp
+	  + Account.hpp
+	  + Account.cpp
+	  + AccountHandler.hpp
   UI/
     + UserInterfaceHandler.hpp
     + UserInterfaceHandler.cpp
-    + Simple
+    + SimpleUI.hpp
+	- SimpleUI.cpp - (WIP)
   + Hotel_Reservation_System_AdaptableData.dat
   + main.cpp

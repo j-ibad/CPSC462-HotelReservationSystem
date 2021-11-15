@@ -14,6 +14,10 @@ namespace Domain::Reservation
       // Operations
 	  time_t getStart();
 	  time_t getEnd();
+	  bool isActive();
+	  void setActive(bool flag);
+	  double getBalance();
+	  void setBalance(double balance);
 	  
      ~Reservation() noexcept;
 	private:

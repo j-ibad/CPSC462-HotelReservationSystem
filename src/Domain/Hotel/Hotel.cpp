@@ -2,8 +2,24 @@
 
 namespace Domain::Hotel
 {
-	double Hotel::reserveRoom(std::string roomID, time_t start, time_t end){
-		return 0.0;
+	Domain::Reservation::Reservation Hotel::reserveRoom(std::string roomID, time_t start, time_t end){
+		auto hotelRoom = getHotelRoom(roomID);
+		
+		//Create reservation
+		Domain::Reservation::Reservation reservation{start, end};
+		
+		//Calculate cost
+		double stay_duration = difftime(end, start);
+		int days_stay = ((int)stay_duration) / 86400;
+		if( (int)stay_duration % 86400 > 0 ){
+			days_stay++;
+		}
+		double balance = hotelRoom->getPrice() * days_stay;
+		reservation.setBalance( balance );
+		
+		hotelRoom->reserve( reservation );
+		
+		return reservation;
 	}
 	
 	Room* Hotel::getHotelRoom(std::string roomID){
@@ -34,7 +50,9 @@ namespace Domain::Hotel
 		std::vector<std::string> placeholder;
 		std::vector<std::string> hotelRoomIDs;
 		for(Room& hotelRoom: hotelRooms){
-			hotelRoomIDs.push_back(hotelRoom.getRoomID());
+			if(hotelRoom.isAvailable(start, end)){
+				hotelRoomIDs.push_back(hotelRoom.getRoomID());
+			}
 		}
 		return hotelRoomIDs;
 	}

@@ -3,6 +3,10 @@
 namespace Domain::Hotel
 {
 	std::string Room::getRoomID(){ return roomID; }
+	double Room::getPrice(){ return price; }
+	void Room::reserve(Domain::Reservation::Reservation reservation){
+		reservedBy.push_back(reservation);
+	}
 	
 	Room::Room()
 	 : roomID(""), price(0.0), roomType(Standard), bedType(Twin), bedCount(0), desc(""){}
@@ -20,6 +24,13 @@ namespace Domain::Hotel
 	}
 	
 	bool Room::isAvailable(time_t start, time_t end){
-		
+		for(auto& res: reservedBy){
+			if( (start < res.getEnd() && start > res.getStart()) ||
+				(end < res.getEnd() && end > res.getStart())
+			){
+				return false;
+			}
+		}
+		return true;
 	}
 }  // namespace Domain::Hotel

@@ -1,7 +1,10 @@
 #pragma once
 
 #include <unordered_map>
-#include <ctime>
+#include <vector>
+#include <time.h>
+
+#include "Domain/Reservation/Reservation.hpp"
 
 namespace Domain::Hotel
 {
@@ -43,7 +46,9 @@ namespace Domain::Hotel
       // Operations
 	  std::string getRoomID();
 	  std::string serialize();
+	  double getPrice();
 	  bool isAvailable(time_t start, time_t end);
+	  void reserve(Domain::Reservation::Reservation);
 	  
      ~Room() noexcept;
 	private:
@@ -53,7 +58,7 @@ namespace Domain::Hotel
 	  std::string desc;
 	  BedType bedType;
 	  RoomType roomType;
-	  //TODO reservedBy Reservation
+	  std::vector<Domain::Reservation::Reservation> reservedBy;
   }; // class Room
 
 

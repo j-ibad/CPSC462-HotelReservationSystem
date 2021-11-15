@@ -3,6 +3,7 @@
 #include <memory>    // std::unique_ptr
 
 #include "Domain/Hotel/HotelHandler.hpp"
+#include "Domain/Reservation/ReservationHandler.hpp"
 
 #include "TechnicalServices/Logging/LoggerHandler.hpp"
 #include "TechnicalServices/Persistence/PersistenceHandler.hpp"

@@ -2,9 +2,10 @@
 
 #include <string>
 #include <vector>
-#include <ctime>
+#include <time.h>
 
 #include "Domain/Hotel/Room.hpp"
+#include "Domain/Reservation/Reservation.hpp"
 
 namespace Domain::Hotel
 {
@@ -14,7 +15,7 @@ namespace Domain::Hotel
     public:
       // Operations
       //   Work in progress ...
-	  virtual double reserveRoom(std::string roomID, time_t start, time_t end) = 0;
+	  virtual Domain::Reservation::Reservation reserveRoom(std::string roomID, time_t start, time_t end) = 0;
 	  virtual Room* getHotelRoom(std::string roomID) = 0;
 	  virtual std::string addHotelRoom(double price, RoomType roomType, BedType bedType, int bedCount, std::string desc) = 0;
 	  virtual std::vector<std::string> getHotelRooms() = 0;
