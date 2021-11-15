@@ -1,0 +1,22 @@
+Thursday
+ + Domain Model
+ + Start Design Model
+ 
+Friday
+ + Design Model Finish
+ + Begin coding
+ 
+Saturday
+ + Finish SAD
+ + Revise other documents
+ + Continue coding
+ 
+Sunday
+ + SAD Finish
+ + Revise other documents
+ + Finish coding
+ + Record
+ 
+Monday
+ + Proofread All
+ + Submit
